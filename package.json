@@ -1,0 +1,24 @@
+{
+  "name": "cloudbackup",
+  "version": "1.0.0",
+  "description": "Cloud Backup service for Minecraft-Cloud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JumpTest251/CloudBackup.git"
+  },
+  "author": "Jumper251",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JumpTest251/CloudBackup/issues"
+  },
+  "homepage": "https://github.com/JumpTest251/CloudBackup#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^5.4.0",
+    "tar": "^6.0.5"
+  }
+}
