@@ -19,6 +19,7 @@
   "homepage": "https://github.com/JumpTest251/CloudBackup#readme",
   "dependencies": {
     "@google-cloud/storage": "^5.4.0",
+    "del": "^6.0.0",
     "tar": "^6.0.5"
   }
 }

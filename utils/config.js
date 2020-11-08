@@ -5,5 +5,7 @@ module.exports = {
     bucketName: process.env.BUCKET_NAME,
     serverName: process.env.SERVER_NAME,
     userName: process.env.USERNAME,
-    action: process.env.ACTION || 'backup'
+    action: process.env.ACTION || 'backup',
+    maxSize: process.env.MAX_SIZE || 5000,
+    generation: process.env.GENERATION
 }

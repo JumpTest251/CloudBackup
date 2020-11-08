@@ -28,6 +28,8 @@ module.exports.uploadFile = function (destination, filename) {
     })
 }
 
-module.exports.downloadFile = function (destination, file) {
-    return storage.bucket(config.bucketName).file(file).download({ destination })
+module.exports.downloadFile = function (destination, file, generation) {
+    return storage.bucket(config.bucketName).file(file, {
+        generation
+    }).download({ destination })
 }
