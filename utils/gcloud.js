@@ -27,3 +27,7 @@ module.exports.uploadFile = function (destination, filename) {
         },
     })
 }
+
+module.exports.downloadFile = function (destination, file) {
+    return storage.bucket(config.bucketName).file(file).download({ destination })
+}
