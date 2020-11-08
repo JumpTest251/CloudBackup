@@ -42,6 +42,8 @@ module.exports.restoreBackup = async function () {
     console.log('uncompressing...');
 
     await uncompress(`./${backupName}`, basePath)
+
+    return true;
 }
 
 
