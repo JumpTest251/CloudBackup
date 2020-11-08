@@ -13,7 +13,7 @@ module.exports.createBackup = async function () {
     console.log('done.');
     console.log('starting upload...');
 
-    const result = await gcloud.uploadFile(`${userName}/${serverName}/${backupName}`, backupName);
+    const result = await gcloud.uploadFile(`${userName.toLowerCase()}/${serverName.toLowerCase()}/${backupName}`, backupName);
     console.log('finished upload.')
 
     return result;
