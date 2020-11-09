@@ -17,7 +17,6 @@ module.exports.listFiles = function (prefix, versions = false) {
     })
 }
 
-
 module.exports.uploadFile = function (destination, filename) {
     return storage.bucket(config.bucketName).upload(filename, {
         gzip: true,

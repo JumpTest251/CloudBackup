@@ -19,10 +19,7 @@ module.exports.createBackup = async function () {
     const { size } = fs.statSync(backupName);
     const mb = size / 1000000.0;
     console.log(`compressed file size: ${mb}mb`)
-    if (mb > maxSize) {
-        console.log('backup exceeds maximum size aborting...')
-        return;
-    }
+    if (mb > maxSize) throw 'backup exceeds maximum size aborting...'
 
     console.log('starting upload...');
 
