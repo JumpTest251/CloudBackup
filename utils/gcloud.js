@@ -9,14 +9,6 @@ const storage = new Storage({
     }
 })
 
-
-module.exports.listFiles = function (prefix, versions = false) {
-    return storage.bucket(config.bucketName).getFiles({
-        prefix,
-        versions
-    })
-}
-
 module.exports.uploadFile = function (destination, filename) {
     return storage.bucket(config.bucketName).upload(filename, {
         gzip: true,
