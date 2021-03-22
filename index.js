@@ -4,7 +4,11 @@ const { createBackup, restoreBackup } = require('./backup');
 if (action === 'backup') {
     createBackup()
         .then(result => console.log(result))
-        .catch(() => process.exit(1))
+        .catch((err) => {
+            console.log('Backup failed: ', err);
+
+            process.exit(1)
+        })
 }
 
 if (action === 'restore') {
@@ -12,5 +16,9 @@ if (action === 'restore') {
         .then(result => {
             if (!result) process.exit(1);
         })
-        .catch(() => process.exit(1))
+        .catch((err) => {
+            console.log('Restore failed: ', err);
+
+            process.exit(1)
+        })
 }
