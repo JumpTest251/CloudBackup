@@ -36,7 +36,7 @@ module.exports.restoreBackup = async function () {
     console.log('done. deleting old directory...')
     await del(`${basePath}/${serverName}`, { force: true })
 
-    console.log('uncompressing...');
+    console.log('uncompressing backup...');
 
     await uncompress(`./${backupName}`, basePath)
 
